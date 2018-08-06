@@ -39,7 +39,7 @@ X.509 attestation comes in two flavors:
 1. Group Enrollment
 In this case, a single (Intermediate) Certificate Authority certificate is uploaded to the Provisioning Service. Devices have access to certificates issued by this CA. All devices will be using the same policies during IoT Hub provisioning.
 
-The service requires proof of possession of the uploaded CA certificate private key. This can be achieved using the [Proof of possession for X.509 Group Enrollment](../../service/samples/GroupCertificateVerificationSample) tool.
+The service requires proof of possession of the uploaded CA certificate private key. This can be achieved using the [Proof of possession for X.509 Group Enrollment](../../Samples/service/GroupCertificateVerificationSample) tool.
 
 Because Intermediate Authorities may have been issued by the uploaded CA, the application must present the full chain of certificates from the one used during authentication to the one uploaded to the service. E.g.: If `My CA Certificate` was uploaded to the service and `MyDevice1` is the device certificate, the entire chain must be available on the device: 
 `<"My CA Certificate", "My Intermediate 1", ..., "My Intermediate N", "MyDevice1>`.
@@ -82,7 +82,7 @@ The samples use a TPMv2.0 simulator that uses a loopback TCP connection for comm
 
 ## List of samples
 
-- [Provisioning Devices with X.509 certificate attestation](509Sample)
+- [Provisioning Devices with X.509 certificate attestation](X509Sample)
 - [Provisioning Devices with TPM attestation](TpmSample)
 
 ### How to run the samples
